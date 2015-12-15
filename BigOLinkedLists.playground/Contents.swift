@@ -48,7 +48,7 @@ class LinkedList<T: Equatable>
             return 0
         } else {
             var current: LLNode = head
-            var x:Int = 0
+            var x:Int = 1
             // cycle through the list of items
             while current.next != nil
             {
@@ -68,7 +68,7 @@ class LinkedList<T: Equatable>
         }
         // loop variables
         var current:LLNode? = head
-        while (current?.next != nil)
+        while (current != nil)
         {
             if current?.next == nil {
             let childToUse:LLNode = LLNode<T>()
@@ -120,6 +120,9 @@ someTestLinkedList.addLink(10)
 someTestLinkedList.addLink(15)
 someTestLinkedList.addLink(34)
 someTestLinkedList.count
+someTestLinkedList.removeLinkAtIndex(0)
+someTestLinkedList.count
+
 
 
 
