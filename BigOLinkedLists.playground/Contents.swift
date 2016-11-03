@@ -23,11 +23,11 @@ func binarySearch(key:Int, imin:Int, imax:Int) {
     let midNumber = numberList[Int(midIndex)]
     // reduce the range of value
     if midNumber > key {
-        binarySearch(key, imin: imin, imax:Int(midIndex) - 1)
+        binarySearch(key: key, imin: imin, imax:Int(midIndex) - 1)
     }
     // increase the range
     else if(midNumber < key) {
-        binarySearch(key, imin: Int(midIndex) + 1, imax: imax)
+        binarySearch(key: key, imin: Int(midIndex) + 1, imax: imax)
     } else {
         print("value \(key) found...")
     }
@@ -53,7 +53,7 @@ class LinkedList<T: Equatable>
             while current.next != nil
             {
                 current = current.next!
-                x++
+                x += 1
             }
             return x
         }
@@ -112,43 +112,14 @@ class LinkedList<T: Equatable>
         // update 
         trailer = current
         current = current?.next
-        listIndex++
+        listIndex += 1
     }
 }
 var someTestLinkedList:LinkedList<Int> = LinkedList()
-someTestLinkedList.addLink(10)
-someTestLinkedList.addLink(15)
-someTestLinkedList.addLink(34)
+someTestLinkedList.addLink(key: 10)
+someTestLinkedList.addLink(key: 15)
+someTestLinkedList.addLink(key: 34)
 someTestLinkedList.count
-someTestLinkedList.removeLinkAtIndex(0)
+someTestLinkedList.removeLinkAtIndex(index: 0)
 someTestLinkedList.count
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-linearSearch(6)
+linearSearch(key: 6)
